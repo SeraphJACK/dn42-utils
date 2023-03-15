@@ -1,0 +1,10 @@
+[Unit]
+Description=Periodically update DN42 roa
+
+[Timer]
+OnBootSec=15s
+OnActiveSec=1h
+
+[Install]
+WantedBy=dn42.target
+
