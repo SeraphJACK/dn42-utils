@@ -1,0 +1,13 @@
+[Unit]
+Description=DN42 peer for %I
+PartOf=dn42.target
+Requires=dn42-basic.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/dn42_peer_up.sh %i
+ExecStop=/usr/local/bin/dn42_peer_down.sh %i
+
+[Install]
+WantedBy=dn42.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=Setup DN42 netns
+Wants=network-online.target nss-lookup.target
+After=network-online.target nss-lookup.target
+PartOf=dn42.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/dn42_setup.sh
+ExecStop=/usr/local/bin/dn42_destroy.sh
+
+[Install]
+WantedBy=dn42.target
+
