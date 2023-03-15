@@ -3,4 +3,4 @@ Description=DN42 target
 Requires=network.target
 
 [Install]
-WantedBy=multi-user.targe
+WantedBy=multi-user.target
