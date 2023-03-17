@@ -1,3 +1,5 @@
 PEER_IP=172.20.0.1
+PEER_IP_V6=fe80::acab
+LOCAL_IP_V6=fe80::1203
 WG_INTERFACE=example
 
